@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_accuel">
+
+    <fragment
+        android:id="@+id/navigation_accueil"
+        android:name="com.example.gestionmedical.ui.accueil.AccueilFragment"
+        android:label="@string/title_accueil"
+        tools:layout="@layout/fragment_acccueil" />
+
+    <fragment
+        android:id="@+id/navigation_recherche"
+        android:name="com.example.gestionmedical.ui.recherche.RechercheFragment"
+        android:label="@string/title_recherche"
+        tools:layout="@layout/fragment_recherche" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.gestionmedical.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
