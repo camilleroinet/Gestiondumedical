@@ -1,6 +1,52 @@
 <resources>
-    <string name="app_name">Gestion du medical</string>
-    <string name="title_accueil">Accueil</string>
-    <string name="title_recherche">Recherche</string>
-    <string name="title_notifications">Notifications</string>
-</resources>
+    <string name="app_name">Gestion medicale</string>
+    <string name="title_home">Home</string>
+    <string name="title_login">Login</string>
+    <string name="title_prisemedoc">Prendre un medicament</string>
+    <string name="title_consultation">Consulter une notice</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btn_generer">Générer un mot de passe</string>
+    <string name="tv_configuration">Configuration du mot de passe</string>
+    <string name="tv_liste_mdp">Ma liste de mots de passe</string>
+    <string name="tv_longueur">Longeur</string>
+    <string name="longueur_du_mot_de_passe">Longueur du mot de passe</string>
+    <string name="nom_du_mot_de_passe">Nom du mot de passe</string>
+    <string name="cb_majuscule">Majuscule (A - Z)</string>
+    <string name="cb_minuscule">Minuscule (a - z)</string>
+    <string name="cb_chiffre">Chiffre (0 – 9)</string>
+    <string name="cb_speciaux">Caracteres speciaux</string>
+    <string name="btn_sauvegarder">Sauvegarder</string>
+    <string name="longueur_defaut">12</string>
+    <string name="nom_defaut">mon mot de passe généré</string>
+    <string name="liste_categorie">Liste des catégories</string>
+    <string name="titre_numero">N°</string>
+    <string name="et_num">1</string>
+    <string name="et_nom">Entrer un nom</string>
+    <string name="nom">Mot de passe</string>
+
+    <string name="et_login">login</string>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="recherche_medoc">taper le nom du médicament</string>
+
+
+    <string name="title_recherche">a</string>
+    <string name="title_parametres">Recherche</string>
+
+
+    <string-array name="categories">
+        <item>Categorie 1</item>
+        <item>Categorie 2</item>
+        <item>Categorie 3</item>
+        <item>Categorie 4</item>
+        <item>Categorie 5</item>
+        <item>Categorie 6</item>
+    </string-array></resources>
