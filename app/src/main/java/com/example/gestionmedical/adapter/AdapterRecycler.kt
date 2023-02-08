@@ -21,14 +21,21 @@ class AdapterRecycler(private val clickListener: (DataUser) -> Unit) : RecyclerV
     override fun onBindViewHolder(holder: MyViewHolder, position: Int){
         holder.bind(datauserlist[position], clickListener)
     }
+
+    fun setList(daousers: List<DataUser>){
+        datauserlist.clear()
+        datauserlist. addAll(daousers)
+    }
+
     class MyViewHolder(val binding: CardviewBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(datauser: DataUser, clickListener: (DataUser) -> Unit){
-            //binding.text1.text = dataUser.text1
+        fun bind(dataUser: DataUser, clickListener: (DataUser) -> Unit){
+            binding.text1.text = dataUser.text1
             binding.itemLayout.setOnClickListener{
-                //clickListener(dataUser)
+                clickListener(dataUser)
             }
         }
     }
+
     override fun getItemCount(): Int {
         return datauserlist.size
     }

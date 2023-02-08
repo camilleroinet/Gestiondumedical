@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 class DataUser (
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "Code_CIS")
-    val  id_medoc: Int,
+    val  id_medoc: Int?,
 
     @ColumnInfo(name="Designation")
     var text1: String?,

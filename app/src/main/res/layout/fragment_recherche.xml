@@ -35,7 +35,8 @@
                 android:id="@+id/bouton_recherche"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:layout_weight="0" />
+                android:layout_weight="0"
+                android:onClick="@{() -> viewModelMain.saveOrUpdate()}"/>
 
 
         </LinearLayout>
@@ -46,8 +47,7 @@
             android:id="@+id/recycler_view_recherche"
             android:layout_width="match_parent"
 
-            android:layout_height="300dp"
-            android:background="@color/purple_200"
+            android:layout_height="match_parent"
             app:layout_constraintTop_toBottomOf="@id/ll_recherche"
             app:layout_constraintStart_toStartOf="parent"
 

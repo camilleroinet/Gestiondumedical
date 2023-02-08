@@ -2,7 +2,6 @@ package com.example.gestionmedical.model
 
 import androidx.lifecycle.*
 import com.example.gestionmedical.Event
-
 import com.example.gestionmedical.db.DataUser
 import com.example.gestionmedical.db.DataUserRepository
 import kotlinx.coroutines.launch
