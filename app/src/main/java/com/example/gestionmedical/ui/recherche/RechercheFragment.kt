@@ -7,36 +7,55 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.gestionmedical.adapter.AdapterRecycler
 import com.example.gestionmedical.databinding.FragmentRechercheBinding
+import com.example.gestionmedical.db.DataUser
+import com.example.gestionmedical.model.ViewModelDao
 
 class RechercheFragment : Fragment() {
 
-    private var _binding: FragmentRechercheBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentRechercheBinding
+    private lateinit var viewModel: ViewModelDao
+    private lateinit var adapter: AdapterRecycler
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val rechercheViewModel =
-            ViewModelProvider(this).get(RechercheViewModel::class.java)
+        // View binding
+        val fragmentRechercheBinding =  FragmentRechercheBinding.inflate(inflater, container, false)
+        binding = fragmentRechercheBinding
 
-        _binding = FragmentRechercheBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDashboard
-        rechercheViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        initRecycler()
+        return fragmentRechercheBinding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?){
+        super.onViewCreated(view, savedInstanceState)
+        binding?.fragmentRecherche = this
+    }
+
+    fun initRecycler(){
+        // Configuration du layout
+        binding.recyclerViewRecherche.layoutManager = LinearLayoutManager(context)
+
+        // Configuration de l'adapter
+        adapter = AdapterRecycler { daouser: DataUser -> listItemClicked(viewModel, daouser)}
+        binding.recyclerViewRecherche.adapter = adapter
+
+        // Affichage des data
+        displayUser()
+
+    }
+    fun listItemClicked(viewModel: ViewModelDao, daouser: DataUser){
+        //viewModel.initUpdateAndDelete(daouser)
+    }
+    fun displayUser(){
+
+    }
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 }

@@ -22,6 +22,7 @@
     <string name="title_recherche">Rercheche un medicament</string>
     <string name="title_parametres">Recherche</string>
     <string name="title_notifications">a effacer</string>
+    <string name="defaut">defaut</string>
 
 
     <string-array name="categories">
